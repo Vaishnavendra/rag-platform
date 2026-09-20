@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from app.core.config import settings
 from app.api.v1.ingest import router as ingest_router
+from app.api.v1.search import router as search_router
 
 app = FastAPI(
     title= "Distributed Real-Time RAG Platform",
@@ -9,6 +10,7 @@ app = FastAPI(
 )
 
 app.include_router(ingest_router,prefix="/api/v1")
+app.include_router(search_router,prefix="/api/v1")
 
 @app.get("/")
 async def root():
