@@ -65,3 +65,4 @@ watchfiles==1.2.0
 websockets==17.1
 xxhash==4.0.1
 zstandard==0.25.0
+streamlit==1.64.0
